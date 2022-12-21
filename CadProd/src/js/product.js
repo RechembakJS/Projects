@@ -28,6 +28,8 @@ function verify(){
                 saveProduct(product)
             }
         }
+
+        
     }
 }
 
