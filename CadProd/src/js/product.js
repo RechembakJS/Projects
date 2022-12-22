@@ -3,6 +3,8 @@ var nameProd = document.getElementById('name');
 var priceProd = document.getElementById('price');
 var descriProd = document.getElementById('description');
 var statusProd = document.getElementById('status');
+var unityProd = document.getElementById('unity');
+var stockProd = document.getElementById('stock');
 
 btSave.addEventListener("click", function(){
     verify();
@@ -23,8 +25,7 @@ function verify(){
                 nameProd.style.borderColor = "#FF0000";
             }else{
                 var product = [];
-                product.push({name:nameProd.value,price:priceProd.value,description:descriProd.value,status:statusProd.value});
-                console.log(statusProd.value);
+                product.push({name:nameProd.value,price:priceProd.value,unity:unityProd.value,stock:stockProd.value,description:descriProd.value,status:statusProd.value});
                 saveProduct(product)
             }
         }

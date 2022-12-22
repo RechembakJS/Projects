@@ -9,6 +9,8 @@
         $prodObj = json_decode($product);
         $name = $prodObj[0]->name;
         $price = $prodObj[0]->price;
+        $unity = $prodObj[0] -> unity;
+        $stock = $prodObj[0] -> stock;
         $description = $prodObj[0]->description;
         $status = $prodObj[0]->status;
 
@@ -18,7 +20,7 @@
             $tatus = false;
         }
 
-        $result = mysqli_query($mysqli, "INSERT INTO products (name, price, description, statusProd) VALUES ('$name','$price','$description','$status')");
+        $result = mysqli_query($mysqli, "INSERT INTO products (name, price, unity, stock, description, statusProd) VALUES ('$name','$price','$unity','$stock','$description','$status')");
         header('Location: ../src/index.html');
     };
    
